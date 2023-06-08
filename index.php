@@ -74,14 +74,14 @@ $filteredHotels = array_filter($hotels, function ($hotel) use ($parcheggioFilter
 <body>
     <main>
         <form class="d-flex justify-content-around bg-success-subtle p-3 align-items-center" action="index.php" method="$_GET">
-            <label for="parcheggio">Filtro Parcheggio:</label>
+            <label for="parcheggio">Parcheggio:</label>
             <select name="parcheggio" id="parcheggio">
                 <option value="">Tutti</option>
                 <option value="si">Si</option>
                 <option value="no">No</option>
             </select>
             <br>
-            <label for="voto">Filtro Voto:</label>
+            <label for="voto">Voto:</label>
             <input type="number" name="voto" id="voto" min="1" max="5">
             <br>
             <button type="submit" class="btn btn-success" value="Filtra">Filtra</button>
