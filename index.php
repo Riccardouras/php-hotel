@@ -68,11 +68,12 @@ $filteredHotels = array_filter($hotels, function ($hotel) use ($parcheggioFilter
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotels</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <main>
-        <form action="index.php" method="$_GET">
+        <form class="d-flex justify-content-around bg-success-subtle p-3 align-items-center" action="index.php" method="$_GET">
             <label for="parcheggio">Filtro Parcheggio:</label>
             <select name="parcheggio" id="parcheggio">
                 <option value="">Tutti</option>
@@ -83,9 +84,9 @@ $filteredHotels = array_filter($hotels, function ($hotel) use ($parcheggioFilter
             <label for="voto">Filtro Voto:</label>
             <input type="number" name="voto" id="voto" min="1" max="5">
             <br>
-            <input type="submit" value="Filtra">
+            <button type="submit" class="btn btn-success" value="Filtra">Filtra</button>
         </form>
-        <section>
+        <section class="mt-5">
             <table class="table table-success table-striped">
                 <thead>
                     <tr>
