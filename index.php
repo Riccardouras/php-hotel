@@ -54,7 +54,7 @@ $filteredHotels = array_filter($hotels, function ($hotel) use ($parcheggioFilter
         ($parcheggioFilter === 'si' && $hotel['parking']) ||
         ($parcheggioFilter === 'no' && !$hotel['parking']);
 
-    $votoMatch = ($votoFilter === '') || ($hotel['vote'] == $votoFilter);
+    $votoMatch = ($votoFilter === '') || ($hotel['vote'] >= $votoFilter);
 
     return $parcheggioMatch && $votoMatch;
 });
